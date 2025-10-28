@@ -38,6 +38,11 @@ public class CalculadoraPuntajeTenis
         {
             return $"Puntaje: {jugador1} - {jugador2}";
         }
+        
+        if (jugador1 == 30 && jugador2 == 0)
+        {
+            return $"Puntaje: {jugador1} - {jugador2}";
+        }
         return string.Empty;
     }
 }
