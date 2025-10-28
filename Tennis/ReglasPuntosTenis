@@ -14,9 +14,7 @@ Opción 1
 [x] Jugador1 3punto = 40  , jugador2 0punto = 0 ( Gana jugador1 ) 
 
 Opción 2
-[] Jugador1 1punto = 15  , jugador2 1punto = 15 ( Puntaje acumulado ninguno gana ) 
-[] Jugador1 2punto = 30  , jugador2 0punto = 15 ( va ganando jugador 1) 
-
+[x] Jugador1 1punto = 15  , jugador2 1punto = 15 ( Puntaje acumulado ninguno gana ) 
 [] Jugador1 3punto = 40  , jugador2 0punto = 15 ( Gana jugador1 ) 
 
 Opción 3

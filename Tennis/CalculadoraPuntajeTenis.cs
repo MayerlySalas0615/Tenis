@@ -2,33 +2,21 @@
 
 public class CalculadoraPuntajeTenis
 {
-    [Fact]
-    public void Jugador1_1P_Jugador2_0P()
+    [Theory]
+    [InlineData(15, 0, "Puntaje: 15 - 0")]
+    [InlineData(30, 0, "Puntaje: 30 - 0")]
+    [InlineData(15, 15, "Puntaje: 15 - 15")]
+    public void Jugador1_Pto_Jugador2_Pto(int Jugador1, int Jugador2 , string Esperado)
     {
-        //Arrange
-        int Jugador1 = 15;
-        int Jugador2 = 0;
+        // //Arrange
+        // int Jugador1 = 15;
+        // int Jugador2 = 0;
         
         //Act
         string resultado = puntaje(Jugador1, Jugador2);
         
         //Assert
-        Assert.Equal("Puntaje: 15 - 0", resultado);
-
-    }
-    
-    [Fact]
-    public void Jugador1_2P_Jugador2_0P()
-    {
-        //Arrange
-        int Jugador1 = 30;
-        int Jugador2 = 0;
-        
-        //Act
-        string resultado = puntaje(Jugador1, Jugador2);
-        
-        //Assert
-        Assert.Equal("Puntaje: 30 - 0", resultado);
+        Assert.Equal(Esperado, resultado);
 
     }
     
@@ -47,28 +35,9 @@ public class CalculadoraPuntajeTenis
 
     }
     
-    [Fact]
-    public void Jugador1_1P_Jugador2_1P()
-    {
-        //Arrange
-        int Jugador1 = 15;
-        int Jugador2 = 15;
-        
-        //Act
-        string resultado = puntaje(Jugador1, Jugador2);
-        
-        //Assert
-        Assert.Equal("Puntaje: 15 - 15", resultado);
-
-    }
-
     private string puntaje(int jugador1, int jugador2)
     {
-        if ((jugador1 == 15 || jugador1 == 30 ) && jugador2 == 0)
-        {
-            return $"Puntaje: {jugador1} - {jugador2}";
-        }
-        if (jugador1 == 15  && jugador2 == 15)
+        if (jugador1 < 40  && jugador2 < 40)
         {
             return $"Puntaje: {jugador1} - {jugador2}";
         }
