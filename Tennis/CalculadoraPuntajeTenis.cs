@@ -21,7 +21,7 @@ public class CalculadoraPuntajeTenis
     {
         if (jugador1 == 15 && jugador2 == 0)
         {
-            return "Puntaje: " + jugador1.ToString() + " - " + jugador2.ToString();
+            return $"Puntaje: {jugador1} - {jugador2}";
         }
         return string.Empty;
     }
