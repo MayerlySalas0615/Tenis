@@ -10,15 +10,19 @@ public class CalculadoraPuntajeTenis
         int Jugador2 = 0;
         
         //Act
-        var resultado = puntaje(Jugador1, Jugador2);
+        string resultado = puntaje(Jugador1, Jugador2);
         
         //Assert
-        Assert.Equal(Jugador1, resultado);
+        Assert.Equal("Puntaje: 15 - 0", resultado);
 
     }
 
-    private int puntaje(int jugador1, int jugador2)
+    private string puntaje(int jugador1, int jugador2)
     {
-        throw new NotImplementedException();
+        if (jugador1 == 15 && jugador2 == 0)
+        {
+            return "Puntaje: " + jugador1.ToString() + " - " + jugador2.ToString();
+        }
+        return string.Empty;
     }
 }

@@ -96,3 +96,4 @@ C:\Users\mayerly.salas\RiderProjects\Tennis\Tennis\obj\Debug\net9.0\refint\Tenni
 C:\Users\mayerly.salas\RiderProjects\Tennis\Tennis\obj\Debug\net9.0\Tennis.pdb
 C:\Users\mayerly.salas\RiderProjects\Tennis\Tennis\obj\Debug\net9.0\Tennis.genruntimeconfig.cache
 C:\Users\mayerly.salas\RiderProjects\Tennis\Tennis\obj\Debug\net9.0\ref\Tennis.dll
+C:\Users\mayerly.salas\RiderProjects\Tennis\Tennis\obj\Debug\net9.0\Tennis.sourcelink.json
