@@ -32,6 +32,20 @@ public class CalculadoraPuntajeTenis
         Assert.Equal(Esperado, resultado);
 
     }
+
+    [Fact]
+    public void Jugador1_40_Jugador2_40()
+    {
+        //Arrange
+        int Jugador1 = 40;
+        int Jugador2 = 40;
+        
+        //Act
+        string resultado = puntaje(Jugador1, Jugador2);
+        
+        //Assert
+        Assert.Equal("Deuce", resultado);
+    }
     
     private string puntaje(int jugador1, int jugador2)
     {
