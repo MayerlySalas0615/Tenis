@@ -1,0 +1,33 @@
+﻿Inicia con 0 puntos
+1 punto  = 15
+2 punto  = 30
+3 punto  = 40
+
+
+Simulacion de puntos de 2 jugadores
+
+Jugador1, Jugador 2
+
+Opción 1
+[] Jugador1 1punto = 15  , jugador2 0punto = 0 ( Gana jugador1 ) 
+[] Jugador1 2punto = 30  , jugador2 0punto = 0 ( Gana jugador1 ) 
+[] Jugador1 3punto = 40  , jugador2 0punto = 0 ( Gana jugador1 ) 
+
+Opción 2
+[] Jugador1 1punto = 15  , jugador2 0punto = 15 ( Ninguno gana seguir jugando ) 
+[] Jugador1 2punto = 30  , jugador2 0punto = 15 ( va ganando jugador 1) 
+[] Jugador1 3punto = 40  , jugador2 0punto = 15 ( Gana jugador1 ) 
+
+Opción 3
+[] Jugador1 3punto = 40          , jugador2 0punto = 40 ( Iguales = Deuce )
+
+[] Jugador1 3punto = 40 + 1punto , jugador2 0punto = 40 ( avanza el juego Jugador 1)
+[] Jugador1 3punto = 40          , jugador2 0punto = 40 + 1 punto ( avanza el juego Jugador 2)
+
+[] Jugador1 3punto = 40 + 2punto , jugador2 0punto =40 ( Gana jugador1 )
+[] Jugador1 3punto = 40          , jugador2 0punto = 40  + 2punto  ( Gana jugador1 )
+ 
+
+ 
+ 
+ 
