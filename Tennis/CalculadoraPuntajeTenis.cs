@@ -20,33 +20,16 @@ public class CalculadoraPuntajeTenis
 
     }
     
-    [Fact]
-    public void Jugador1_3P_Jugador2_0P()
+    [Theory]
+    [InlineData(40, 0, "Gana Jugador 1: 40 - 0")]
+    [InlineData(40, 15, "Gana Jugador 1: 40 - 15")]
+    public void Jugador1_MasP_Jugador2_MenosP(int Jugador1, int Jugador2 , string Esperado)
     {
-        //Arrange
-        int Jugador1 = 40;
-        int Jugador2 = 0;
-        
         //Act
         string resultado = puntaje(Jugador1, Jugador2);
         
         //Assert
-        Assert.Equal("Gana Jugador 1: 40 - 0", resultado);
-
-    }
-    
-    [Fact]
-    public void Jugador1_3P_Jugador2_1P()
-    {
-        //Arrange
-        int Jugador1 = 40;
-        int Jugador2 = 15;
-        
-        //Act
-        string resultado = puntaje(Jugador1, Jugador2);
-        
-        //Assert
-        Assert.Equal("Gana Jugador 1: 40 - 15", resultado);
+        Assert.Equal(Esperado, resultado);
 
     }
     
