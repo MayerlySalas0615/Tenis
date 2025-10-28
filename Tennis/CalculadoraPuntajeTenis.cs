@@ -34,15 +34,11 @@ public class CalculadoraPuntajeTenis
 
     private string puntaje(int jugador1, int jugador2)
     {
-        if (jugador1 == 15 && jugador2 == 0)
+        if ((jugador1 == 15 || jugador1 == 30 ) && jugador2 == 0)
         {
             return $"Puntaje: {jugador1} - {jugador2}";
         }
         
-        if (jugador1 == 30 && jugador2 == 0)
-        {
-            return $"Puntaje: {jugador1} - {jugador2}";
-        }
         return string.Empty;
     }
 }
