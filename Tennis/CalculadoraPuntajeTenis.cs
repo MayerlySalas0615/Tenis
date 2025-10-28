@@ -56,7 +56,7 @@ public class CalculadoraPuntajeTenis
         {
             return $"Puntaje: {jugador1} - {jugador2}";
         }
-        if (jugador1 == 40 && jugador2 == 0)
+        if (jugador1 == 40 && jugador2 < 40)
         {
             return $"Gana Jugador 1: {jugador1} - {jugador2}";
         }
