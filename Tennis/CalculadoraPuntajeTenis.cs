@@ -56,7 +56,7 @@ public class CalculadoraPuntajeTenis
 
         if (jugador1 == 40 && jugador2 == 0)
         {
-            return "Gana:" {jugador1};
+            return $"Gana Jugador 1: {jugador1} - {jugador2}";
         }
         
         return string.Empty;
