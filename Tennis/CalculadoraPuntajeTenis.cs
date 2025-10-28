@@ -59,6 +59,6 @@ public class CalculadoraPuntajeTenis
             return $"Gana Jugador 1: {jugador1} - {jugador2}";
         }
         
-        return string.Empty;
+        return "Puntaje No valido";
     }
 }
