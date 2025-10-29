@@ -6,35 +6,29 @@ public class CalculadoraPuntajeTenis
     [InlineData(15, 0, "Puntaje: 15 - 0")]
     [InlineData(30, 0, "Puntaje: 30 - 0")]
     [InlineData(15, 15, "Puntaje: 15 - 15")]
-    public void Jugador1_Pto_Jugador2_Pto(int Jugador1, int Jugador2 , string Esperado)
+    public void Jugador1_Pto_Jugador2_Pto_Normal(int Jugador1, int Jugador2 , string Esperado)
     {
-        // //Arrange
-        // int Jugador1 = 15;
-        // int Jugador2 = 0;
-        
         //Act
         string resultado = puntaje(Jugador1, Jugador2);
         
         //Assert
         Assert.Equal(Esperado, resultado);
-
     }
     
     [Theory]
     [InlineData(40, 0, "Gana Jugador 1: 40 - 0")]
     [InlineData(40, 15, "Gana Jugador 1: 40 - 15")]
-    public void Jugador1_MasP_Jugador2_MenosP(int Jugador1, int Jugador2 , string Esperado)
+    public void Jugador1_Gana(int Jugador1, int Jugador2 , string Esperado)
     {
         //Act
         string resultado = puntaje(Jugador1, Jugador2);
         
         //Assert
         Assert.Equal(Esperado, resultado);
-
     }
 
     [Fact]
-    public void Jugador1_40_Jugador2_40()
+    public void Puntaje_Deuce()
     {
         //Arrange
         int Jugador1 = 40;
