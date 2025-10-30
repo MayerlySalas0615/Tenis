@@ -41,21 +41,19 @@ public class CalculadoraPuntajeTenis
         Assert.Equal("Deuce", resultado);
     }
 
-    [Fact]
-    public void AvanzaJugador1_40mas1Punto_vs_Jugador2_40()
+    [Theory]
+    [InlineData(40 +1, 40, "Avanza Jugador 1: 40 + 1 - 40")]
+    [InlineData(40, 40+ 1, "Avanza Jugador 2: 40 + 1 - 40")]
+    public void AvanzaJugador_40mas1punto(int Jugador1, int Jugador2 , string Esperado)
     {
-        //Arrange
-        int Jugador1 = 40 + 1;
-        int Jugador2 = 40;
-        
         //Act
         string resultado = puntaje(Jugador1, Jugador2);
         
         //Assert
-        Assert.Equal("Avanza Jugador 1: 40 + 1  - 40", resultado);
+        Assert.Equal(Esperado, resultado);
     }
     
-    [Fact]
+    [Fact(Skip = "Esta prueba se omite por refactorizacion")]
     public void AvanzaJugador2_40mas1Punto_vs_Jugador1_40()
     {
         //Arrange
@@ -85,15 +83,12 @@ public class CalculadoraPuntajeTenis
             return "Deuce";
         }
         
-        if (jugador1 == 41 && jugador2 == 40)
+        if ((jugador1 == 41 && jugador2 == 40) || (jugador1 == 40 && jugador2 == 41) )
         {
-            return "Avanza Jugador 1: 40 + 1  - 40";
+            string quienAvanza = jugador1 > jugador2 ? "Jugador 1" : "Jugador 2";
+            return $"Avanza {quienAvanza}: 40 + 1 - 40";
         }
         
-        if (jugador1 == 40 && jugador2 == 41)
-        {
-            return "Avanza Jugador 2: 40 + 1  - 40";
-        }
         
         return "Puntaje No valido";
     }
