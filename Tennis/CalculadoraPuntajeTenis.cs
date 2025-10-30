@@ -18,6 +18,7 @@ public class CalculadoraPuntajeTenis
     [Theory]
     [InlineData(40, 0, "Gana Jugador 1: 40 - 0")]
     [InlineData(40, 15, "Gana Jugador 1: 40 - 15")]
+    [InlineData(0, 40, "Gana Jugador 2: 0 - 40")]
     public void Jugador1_Gana(int Jugador1, int Jugador2 , string Esperado)
     {
         //Act
@@ -87,9 +88,10 @@ public class CalculadoraPuntajeTenis
         {
             return $"Puntaje: {jugador1} - {jugador2}";
         }
-        if (jugador1 == 40 && jugador2 < 30)
+        if ((jugador1 == 40 && jugador2 < 30) || (jugador1 < 30 && jugador2 == 40))
         {
-            return $"Gana Jugador 1: {jugador1} - {jugador2}";
+            string quiengana = jugador1 > jugador2 ? "Jugador 1" : "Jugador 2";
+            return $"Gana {quiengana}: {jugador1} - {jugador2}";
         }
 
         if (jugador1 == 40 && jugador2 == 40)
@@ -107,7 +109,6 @@ public class CalculadoraPuntajeTenis
         {
             return "Gana Jugador 1";
         }
-        
         
         return "Puntaje No valido";
     }
