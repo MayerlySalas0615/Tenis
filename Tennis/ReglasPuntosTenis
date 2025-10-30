@@ -18,7 +18,7 @@ Opción 2
 [x] Jugador1 3punto = 40  , jugador2 0punto = 15 ( Gana jugador1 ) 
 
 Opción 3
-[] Jugador1 3punto = 40          , jugador2 0punto = 40 ( Iguales = Deuce )
+[x] Jugador1 3punto = 40          , jugador2 0punto = 40 ( Iguales = Deuce )
 
 [] Jugador1 3punto = 40 + 1punto , jugador2 0punto = 40 ( avanza el juego Jugador 1)
 [] Jugador1 3punto = 40          , jugador2 0punto = 40 + 1 punto ( avanza el juego Jugador 2)
