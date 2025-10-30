@@ -68,43 +68,30 @@ public class CalculadoraPuntajeTenis
         Assert.Equal("Avanza Jugador 2: 40 + 1  - 40", resultado);
     }
 
-    [Fact]
-    public void GanaJugador1_40mas2punto()
+    [Theory]
+    [InlineData(42, 40, "Gana Jugador 1: 42 - 40")] 
+    [InlineData(40, 42, "Gana Jugador 2: 40 - 42")]
+    public void GanaJugador_40mas2punto(int Jugador1, int Jugador2 , string Esperado)
     {
-        //Arrange
-        int Jugador1 = 40 + 2;
-        int Jugador2 = 40;
-        
         //Act
         string resultado = puntaje(Jugador1, Jugador2);
         
         //Assert
-        Assert.Equal("Gana Jugador 1", resultado);
+        Assert.Equal(Esperado, resultado);
     }
     
-    [Fact]
-    public void GanaJugador2_40mas2punto()
-    {
-        //Arrange
-        int Jugador1 = 40;
-        int Jugador2 = 40 + 2;
-        
-        //Act
-        string resultado = puntaje(Jugador1, Jugador2);
-        
-        //Assert
-        Assert.Equal("Gana Jugador 2", resultado);
-    }
     
     private string puntaje(int jugador1, int jugador2)
     {
+        string quiengana = jugador1 > jugador2 ? "Jugador 1" : "Jugador 2";
+        
         if (jugador1 < 40  && jugador2 < 40)
         {
             return $"Puntaje: {jugador1} - {jugador2}";
         }
+        
         if ((jugador1 == 40 && jugador2 < 30) || (jugador1 < 30 && jugador2 == 40))
         {
-            string quiengana = jugador1 > jugador2 ? "Jugador 1" : "Jugador 2";
             return $"Gana {quiengana}: {jugador1} - {jugador2}";
         }
 
@@ -119,14 +106,9 @@ public class CalculadoraPuntajeTenis
             return $"Avanza {quienAvanza}: 40 + 1 - 40";
         }
 
-        if (jugador1 == 42 && jugador2 == 40)
+        if ((jugador1 == 42 && jugador2 == 40) || (jugador1 == 40 && jugador2 == 42))
         {
-            return "Gana Jugador 1";
-        }
-        
-        if (jugador1 == 40 && jugador2 == 42)
-        {
-            return "Gana Jugador 2";
+            return $"Gana {quiengana}: {jugador1} - {jugador2}";
         }
         
         return "Puntaje No valido";

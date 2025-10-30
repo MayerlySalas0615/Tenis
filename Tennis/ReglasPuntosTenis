@@ -24,7 +24,7 @@ Opción 3
 [x] Jugador1 3punto = 40          , jugador2 0punto = 40 + 1 punto ( avanza el juego Jugador 2)
 
 [x] Jugador1 3punto = 40 + 2punto , jugador2 0punto =40 ( Gana jugador1 )
-[] Jugador1 3punto = 40          , jugador2 0punto = 40  + 2punto  ( Gana jugador1 )
+[x] Jugador1 3punto = 40          , jugador2 0punto = 40  + 2punto  ( Gana jugador1 )
  
 
  
