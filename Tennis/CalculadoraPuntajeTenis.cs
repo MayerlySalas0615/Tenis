@@ -52,7 +52,7 @@ public class CalculadoraPuntajeTenis
         string resultado = puntaje(Jugador1, Jugador2);
         
         //Assert
-        Assert.Equal("Avanza Jugador 1: 40 - 40", resultado);
+        Assert.Equal("Avanza Jugador 1: 40 + 1  - 40", resultado);
     }
     
     private string puntaje(int jugador1, int jugador2)
@@ -69,6 +69,11 @@ public class CalculadoraPuntajeTenis
         if (jugador1 == 40 && jugador2 == 40)
         {
             return "Deuce";
+        }
+        
+        if (jugador1 == 41 && jugador2 == 40)
+        {
+            return "Avanza Jugador 1: 40 + 1  - 40";
         }
         
         return "Puntaje No valido";
