@@ -90,6 +90,11 @@ public class CalculadoraPuntajeTenis
             return "Avanza Jugador 1: 40 + 1  - 40";
         }
         
+        if (jugador1 == 40 && jugador2 == 41)
+        {
+            return "Avanza Jugador 2: 40 + 1  - 40";
+        }
+        
         return "Puntaje No valido";
     }
 }
