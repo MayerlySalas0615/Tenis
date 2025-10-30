@@ -124,6 +124,11 @@ public class CalculadoraPuntajeTenis
             return "Gana Jugador 1";
         }
         
+        if (jugador1 == 40 && jugador2 == 42)
+        {
+            return "Gana Jugador 2";
+        }
+        
         return "Puntaje No valido";
     }
 }
