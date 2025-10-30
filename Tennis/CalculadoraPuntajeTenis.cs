@@ -66,6 +66,20 @@ public class CalculadoraPuntajeTenis
         //Assert
         Assert.Equal("Avanza Jugador 2: 40 + 1  - 40", resultado);
     }
+
+    [Fact]
+    public void GanaJugador1_40mas2punto()
+    {
+        //Arrange
+        int Jugador1 = 40 + 2;
+        int Jugador2 = 40;
+        
+        //Act
+        string resultado = puntaje(Jugador1, Jugador2);
+        
+        //Assert
+        Assert.Equal("Gana Jugador 1", resultado);
+    }
     
     private string puntaje(int jugador1, int jugador2)
     {
@@ -73,7 +87,7 @@ public class CalculadoraPuntajeTenis
         {
             return $"Puntaje: {jugador1} - {jugador2}";
         }
-        if (jugador1 == 40 && jugador2 < 40)
+        if (jugador1 == 40 && jugador2 < 30)
         {
             return $"Gana Jugador 1: {jugador1} - {jugador2}";
         }
